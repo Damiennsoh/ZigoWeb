@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ZIGO — Media Personality | Host | Creator</title>
+<meta name="description" content="Zigo — Zimbabwean media personality, host and creator. Bookings, brand deals and media appearances." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000'/%3E%3Ctext x='32' y='46' font-family='Arial Black' font-size='38' font-weight='900' fill='%23D4AF37' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          gold: '#D4AF37',
+          goldlight: '#F1D98B',
+          coal: '#0A0A0A',
+        },
+        fontFamily: {
+          display: ['Anton', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  body { background:#000; color:#fff; font-family:'Inter',sans-serif; }
+  ::selection { background:#D4AF37; color:#000; }
+  ::-webkit-scrollbar { width:10px; }
+  ::-webkit-scrollbar-track { background:#000; }
+  ::-webkit-scrollbar-thumb { background:#2a2a2a; border-radius:6px; }
+  ::-webkit-scrollbar-thumb:hover { background:#D4AF37; }
+
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.2,.6,.2,1), transform .8s cubic-bezier(.2,.6,.2,1); }
+  .reveal.visible { opacity:1; transform:none; }
+  .reveal-d1 { transition-delay:.1s; } .reveal-d2 { transition-delay:.2s; } .reveal-d3 { transition-delay:.3s; }
+
+  .gold-frame { position:relative; }
+  .gold-frame::after { content:''; position:absolute; inset:0; transform:translate(14px,14px); border:1px solid rgba(212,175,55,.5); z-index:-1; }
+
+  @keyframes bounceSoft { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+  .bounce-soft { animation:bounceSoft 2s ease-in-out infinite; }
+
+  .card-img { transition:transform .6s cubic-bezier(.2,.6,.2,1), filter .6s; }
+  .media-card:hover .card-img { transform:scale(1.06); }
+  .media-card .card-shade { transition:background .5s; }
+  .media-card:hover .card-shade { background:rgba(212,175,55,.14); }
+</style>
+</head>
+
+<body class="font-body antialiased">
+
+<!-- ============ NAV ============ -->
+<nav id="nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="#top" class="font-display text-2xl tracking-wider text-white">ZI<span class="text-gold">GO</span></a>
+    <div class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-[0.2em] text-neutral-300">
+      <a href="#about" class="hover:text-gold transition">ABOUT</a>
+      <a href="#media" class="hover:text-gold transition">MEDIA</a>
+      <a href="#brands" class="hover:text-gold transition">BRANDS</a>
+      <a href="#contact" class="hover:text-gold transition">CONTACT</a>
+    </div>
+    <a href="#contact" class="border border-gold text-gold font-display tracking-widest text-sm px-5 py-2 hover:bg-gold hover:text-black transition">BOOK ZIGO</a>
+  </div>
+</nav>
+
+<!-- ============ 1. HERO ============ -->
+<header id="top" class="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
+  <img src="assets/hero.jpg" alt="Zigo on stage" class="absolute inset-0 w-full h-full object-cover object-center" />
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
+
+  <div class="relative z-10 text-center px-5">
+    <p class="reveal text-gold text-[11px] md:text-xs font-semibold tracking-[0.45em] uppercase mb-4">Harare · Zimbabwe</p>
+    <h1 class="reveal reveal-d1 font-display text-gold uppercase leading-none text-[clamp(5rem,20vw,11rem)] drop-shadow-[0_6px_30px_rgba(0,0,0,0.8)]">ZIGO</h1>
+    <p class="reveal reveal-d2 text-white text-base md:text-lg font-light tracking-[0.25em] uppercase mt-4">Media Personality&nbsp;|&nbsp;Host&nbsp;|&nbsp;Creator</p>
+
+    <div class="reveal reveal-d3 flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+      <a href="#contact" class="w-64 sm:w-auto bg-black/70 border-2 border-gold text-gold font-display tracking-[0.2em] px-10 py-4 text-lg hover:bg-gold hover:text-black transition-all duration-300">BOOK ZIGO</a>
+      <a href="#media" class="w-64 sm:w-auto bg-transparent border-2 border-white/80 text-white font-display tracking-[0.2em] px-10 py-4 text-lg hover:bg-white hover:text-black transition-all duration-300">WATCH LATEST</a>
+    </div>
+  </div>
+
+  <a href="#about" aria-label="Scroll down" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-gold bounce-soft">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</header>
+
+<!-- ============ 2. ABOUT ============ -->
+<section id="about" class="relative py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <div class="reveal gold-frame">
+      <img src="assets/about.jpg" alt="Zigo portrait" class="w-full h-auto object-cover" />
+    </div>
+
+    <div>
+      <p class="reveal text-gold text-xs font-semibold tracking-[0.35em] uppercase mb-3">The Man Behind The Mic</p>
+      <h2 class="reveal font-display text-4xl md:text-5xl uppercase text-white mb-6">ABOUT <span class="text-gold">ZIGO</span></h2>
+      <p class="reveal text-neutral-300 leading-relaxed mb-4">
+        Zigo is one of Zimbabwe's leading media personalities, known for hosting top radio shows,
+        TV interviews and digital content reaching millions. From red carpets to sit-downs with the
+        country's biggest names, he brings unmatched energy, wit and authenticity to every conversation.
+      </p>
+      <p class="reveal text-neutral-400 leading-relaxed text-sm mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua.
+      </p>
+
+      <div class="reveal grid grid-cols-3 gap-4 mb-10 text-center">
+        <div class="border border-white/10 py-4">
+          <p class="font-display text-2xl md:text-3xl text-gold">1M+</p>
+          <p class="text-[10px] tracking-[0.2em] text-neutral-400 uppercase mt-1">Monthly Reach</p>
+        </div>
+        <div class="border border-white/10 py-4">
+          <p class="font-display text-2xl md:text-3xl text-gold">500+</p>
+          <p class="text-[10px] tracking-[0.2em] text-neutral-400 uppercase mt-1">Interviews</p>
+        </div>
+        <div class="border border-white/10 py-4">
+          <p class="font-display text-2xl md:text-3xl text-gold">10+</p>
+          <p class="text-[10px] tracking-[0.2em] text-neutral-400 uppercase mt-1">Years On Air</p>
+        </div>
+      </div>
+
+      <h3 class="reveal font-display text-xl tracking-widest text-white uppercase mb-4">Featured <span class="text-gold">Video</span></h3>
+      <div class="reveal relative aspect-video bg-gradient-to-br from-neutral-900 to-black border border-white/10 flex flex-col items-center justify-center group cursor-pointer">
+        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-gold flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#D4AF37"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <p class="mt-4 text-xs tracking-[0.3em] text-neutral-400 uppercase">Highlight Reel · 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. MEDIA HUB ============ -->
+<section id="media" class="py-20 md:py-28 bg-coal">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="reveal text-gold text-xs font-semibold tracking-[0.35em] uppercase mb-3">Explore</p>
+        <h2 class="reveal font-display text-4xl md:text-5xl uppercase text-white">THE <span class="text-gold">MEDIA</span> HUB</h2>
+      </div>
+      <div class="hidden md:block h-px flex-1 bg-white/10 mx-8 mb-4"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+      <!-- Card -->
+      <a href="#" class="reveal media-card group relative overflow-hidden block">
+        <img src="assets/media-news.jpg" alt="Latest News" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Latest <span class="text-gold">News</span></p>
+        </div>
+      </a>
+      <a href="#" class="reveal media-card group relative overflow-hidden block reveal-d1">
+        <img src="assets/media-interviews.jpg" alt="Interviews" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Inter<span class="text-gold">views</span></p>
+        </div>
+      </a>
+      <a href="#" class="reveal media-card group relative overflow-hidden block reveal-d2">
+        <img src="assets/media-videos.jpg" alt="Videos" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Vid<span class="text-gold">eos</span></p>
+        </div>
+      </a>
+      <a href="#" class="reveal media-card group relative overflow-hidden block">
+        <img src="assets/media-podcasts.jpg" alt="Podcasts" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Pod<span class="text-gold">casts</span></p>
+        </div>
+      </a>
+      <a href="#" class="reveal media-card group relative overflow-hidden block reveal-d1">
+        <img src="assets/media-events.jpg" alt="Events" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Ev<span class="text-gold">ents</span></p>
+        </div>
+      </a>
+      <a href="#" class="reveal media-card group relative overflow-hidden block reveal-d2">
+        <img src="assets/media-gallery.jpg" alt="Gallery" class="card-img w-full aspect-[3/2] object-cover" />
+        <div class="card-shade absolute inset-0 bg-black/25"></div>
+        <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+          <p class="font-display text-lg md:text-2xl tracking-wider text-white uppercase">Gal<span class="text-gold">lery</span></p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. BRANDS / PRESS ============ -->
+<section id="brands" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5 text-center">
+    <p class="reveal text-gold text-xs font-semibold tracking-[0.35em] uppercase mb-3">Press &amp; Partners</p>
+    <h2 class="reveal font-display text-4xl md:text-5xl uppercase text-white mb-12">WORKED <span class="text-gold">WITH</span></h2>
+
+    <div class="reveal grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mb-16">
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 1</div>
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 2</div>
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 3</div>
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 4</div>
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 5</div>
+      <div class="h-20 border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-500 font-bold tracking-[0.25em] text-xs grayscale hover:grayscale-0 hover:text-gold hover:border-gold/40 transition-all duration-300">BRAND 6</div>
+    </div>
+
+    <blockquote class="reveal max-w-3xl mx-auto">
+      <p class="font-display text-gold text-6xl leading-none mb-2">“</p>
+      <p class="text-xl md:text-2xl font-light text-neutral-200 leading-relaxed">
+        Zigo brings unmatched energy to any brand. Every campaign he touches turns into a conversation.
+      </p>
+      <footer class="mt-6 text-xs tracking-[0.3em] uppercase text-neutral-500">— Dummy Testimonial · Brand Manager</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ 5. CONTACT ============ -->
+<section id="contact" class="py-20 md:py-28 bg-coal border-t border-white/5">
+  <div class="max-w-3xl mx-auto px-5">
+    <div class="text-center mb-12">
+      <p class="reveal text-gold text-xs font-semibold tracking-[0.35em] uppercase mb-3">Bookings · Collabs · Ads</p>
+      <h2 class="reveal font-display text-4xl md:text-5xl uppercase text-white">WORK WITH <span class="text-gold">ZIGO</span></h2>
+      <p class="reveal text-neutral-400 mt-4">For bookings, brand deals, and media appearances.</p>
+    </div>
+
+    <form id="enquiryForm" class="reveal space-y-4">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <input type="text" required placeholder="NAME" class="w-full bg-white/[0.04] border border-white/10 px-5 py-4 text-sm tracking-widest placeholder-neutral-500 focus:outline-none focus:border-gold transition" />
+        <input type="text" placeholder="COMPANY" class="w-full bg-white/[0.04] border border-white/10 px-5 py-4 text-sm tracking-widest placeholder-neutral-500 focus:outline-none focus:border-gold transition" />
+      </div>
+      <input type="email" required placeholder="EMAIL" class="w-full bg-white/[0.04] border border-white/10 px-5 py-4 text-sm tracking-widest placeholder-neutral-500 focus:outline-none focus:border-gold transition" />
+      <textarea rows="5" required placeholder="MESSAGE" class="w-full bg-white/[0.04] border border-white/10 px-5 py-4 text-sm tracking-widest placeholder-neutral-500 focus:outline-none focus:border-gold transition resize-none"></textarea>
+      <button type="submit" class="w-full bg-gold text-black font-display text-lg tracking-[0.25em] py-4 hover:bg-goldlight transition-colors duration-300">SEND ENQUIRY</button>
+      <p id="formNote" class="hidden text-center text-gold text-sm tracking-widest pt-2">✓ ENQUIRY RECEIVED — WE'LL BE IN TOUCH</p>
+    </form>
+
+    <div class="reveal mt-10 text-center text-sm text-neutral-400 tracking-wider">
+      <p>Email: <a href="mailto:bookings@zigo.co.zw" class="text-gold hover:text-goldlight transition">bookings@zigo.co.zw</a>
+      <span class="mx-3 text-neutral-600">|</span>
+      Phone: <span class="text-gold">+263 77X XXX XXX</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FOOTER ============ -->
+<footer class="py-12 border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-5 flex flex-col items-center gap-6">
+    <p class="font-display text-2xl tracking-wider">ZI<span class="text-gold">GO</span></p>
+    <div class="flex items-center gap-6">
+      <a href="#" aria-label="Instagram" class="text-neutral-400 hover:text-gold transition"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="TikTok" class="text-neutral-400 hover:text-gold transition"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="#" aria-label="YouTube" class="text-neutral-400 hover:text-gold transition"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+      <a href="#" aria-label="X" class="text-neutral-400 hover:text-gold transition"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="#" aria-label="Facebook" class="text-neutral-400 hover:text-gold transition"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+    <p class="text-xs text-neutral-500 tracking-widest">© 2026 ZIGO · SITE BY ACRUX</p>
+  </div>
+</footer>
+
+<script>
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 40) nav.classList.add('bg-black/85','backdrop-blur-md','border-b','border-white/10');
+    else nav.classList.remove('bg-black/85','backdrop-blur-md','border-b','border-white/10');
+  };
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Demo form (no backend)
+  document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formNote').classList.remove('hidden');
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
